@@ -1,13 +1,26 @@
 import React, { useState } from 'react';
-import { Building2, Phone, Mail, MessageSquare, Award, Users, Shield, Hammer } from 'lucide-react';
+import { Building2, Phone, Mail, MessageSquare, Award, Users, SquareGantt, Shovel, PencilRuler, AppWindow, FolderKanban, BadgeDollarSign, Cog } from 'lucide-react';
 import LoginModal from '../components/LoginModal';
+import PreviewModal from '../components/previewModal';
 import LanguageSelector from '../components/LanguageSelector';
 import { useLanguage } from '../contexts/LanguageContext';
+import logo from '../icons/logo.png';
 
 const LandingPage: React.FC = () => {
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+  const [isAdvModalOpen, setIsAdvModalOpen] = useState(false);
+  const [isNewModalOpen, setIsNewModalOpen] = useState(false);
+  const [isRemodelingModalOpen, setIsRemodelingModalOpen] = useState(false);
+  const [isOnlineModalOpen, setIsOnlineModalOpen] = useState(false);
+  const [isTenderModalOpen, setIsTenderModalOpen] = useState(false);
+  const [isBudgetModalOpen, setIsBudgetModalOpen] = useState(false);
+  const [isControlModalOpen, setIsControlModalOpen] = useState(false);
   const [contactForm, setContactForm] = useState({ subject: '', message: '' });
   const { t } = useLanguage();
+
+  const titleAdv = t('landing.services.subtitle1');
+  const imageSrcAdv = 'https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&w=600';
+  const textDescriptionAdv = t('landing.services.description1');
 
   const handleContactSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -25,7 +38,7 @@ const LandingPage: React.FC = () => {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               <Building2 className="h-8 w-8 text-blue-600" />
-              <span className="ml-2 text-xl font-bold text-gray-900">NLH</span>
+              <img src={logo} alt="NLH Logo" className="h-8 w-8 ml-2" />
             </div>
             
             <div className="hidden md:flex items-center space-x-8">
@@ -69,6 +82,9 @@ const LandingPage: React.FC = () => {
             <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
               {t('landing.hero.subtitle')}
             </p>
+            <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
+              {t('landing.hero.subtitle2')}
+            </p>
             <button
               onClick={() => setIsLoginModalOpen(true)}
               className="bg-gradient-to-r from-cyan-400 to-blue-500 text-white px-8 py-4 rounded-lg text-lg font-medium hover:from-cyan-500 hover:to-blue-600 transition-all transform hover:scale-105 shadow-xl"
@@ -90,28 +106,64 @@ const LandingPage: React.FC = () => {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-blue-50 to-cyan-50 hover:shadow-lg transition-all">
+            <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-blue-50 to-cyan-50 hover:shadow-lg transition-all" onClick={() => setIsAdvModalOpen(true)}>
               <div className="bg-gradient-to-r from-blue-600 to-cyan-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Hammer className="h-8 w-8 text-white" />
+                <SquareGantt className="h-8 w-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Project Management</h3>
-              <p className="text-gray-600">Comprehensive project oversight from planning to completion</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">{t('landing.services.subtitle1')}</h3>
+              <p className="text-gray-600">{t('landing.services.description1')}</p>
             </div>
             
-            <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-green-50 to-emerald-50 hover:shadow-lg transition-all">
+            <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-green-50 to-emerald-50 hover:shadow-lg transition-all" onClick={() => setIsNewModalOpen(true)}>
               <div className="bg-gradient-to-r from-green-600 to-emerald-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Users className="h-8 w-8 text-white" />
+                <Shovel className="h-8 w-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Team Collaboration</h3>
-              <p className="text-gray-600">Seamless coordination between all project stakeholders</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">{t('landing.services.subtitle2')}</h3>
+              <p className="text-gray-600">{t('landing.services.description2')}</p>
             </div>
             
-            <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-purple-50 to-indigo-50 hover:shadow-lg transition-all">
+            <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-purple-50 to-indigo-50 hover:shadow-lg transition-all" onClick={() => setIsRemodelingModalOpen(true)}>
               <div className="bg-gradient-to-r from-purple-600 to-indigo-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Shield className="h-8 w-8 text-white" />
+                <PencilRuler className="h-8 w-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Compliance & Safety</h3>
-              <p className="text-gray-600">Ensure all projects meet regulatory and safety standards</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">{t('landing.services.subtitle3')}</h3>
+              <p className="text-gray-600">{t('landing.services.description3')}</p>
+            </div>
+          </div>
+          <br />
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-blue-50 to-cyan-50 hover:shadow-lg transition-all" onClick={() => setIsOnlineModalOpen(true)}>
+              <div className="bg-gradient-to-r from-blue-600 to-cyan-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                <AppWindow className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">{t('landing.services.subtitle4')}</h3>
+              <p className="text-gray-600">{t('landing.services.description4')}</p>
+            </div>
+            
+            <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-green-50 to-emerald-50 hover:shadow-lg transition-all" onClick={() => setIsTenderModalOpen(true)}>
+              <div className="bg-gradient-to-r from-green-600 to-emerald-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                <FolderKanban className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">{t('landing.services.subtitle5')}</h3>
+              <p className="text-gray-600">{t('landing.services.description5')}</p>
+            </div>
+            
+            <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-purple-50 to-indigo-50 hover:shadow-lg transition-all" onClick={() => setIsBudgetModalOpen(true)}>
+              <div className="bg-gradient-to-r from-purple-600 to-indigo-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                <BadgeDollarSign className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">{t('landing.services.subtitle6')}</h3>
+              <p className="text-gray-600">{t('landing.services.description6')}</p>
+            </div>
+          </div>
+          <br />
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-blue-50 to-cyan-50 hover:shadow-lg transition-all" onClick={() => setIsControlModalOpen(true)}>
+              <div className="bg-gradient-to-r from-blue-600 to-cyan-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Cog className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">{t('landing.services.subtitle7')}</h3>
+              <p className="text-gray-600">{t('landing.services.description7')}</p>
             </div>
           </div>
         </div>
@@ -252,6 +304,13 @@ const LandingPage: React.FC = () => {
       </footer>
 
       <LoginModal isOpen={isLoginModalOpen} onClose={() => setIsLoginModalOpen(false)} />
+      <PreviewModal isOpen={isAdvModalOpen} title={t('landing.services.subtitle1')} imageSrc={imageSrcAdv} textDescription={t('landing.services.description1')} onClose={() => setIsAdvModalOpen(false)} />
+      <PreviewModal isOpen={isNewModalOpen} title={t('landing.services.subtitle2')} imageSrc={imageSrcAdv} textDescription={t('landing.services.description2')}  onClose={() => setIsNewModalOpen(false)} />
+      <PreviewModal isOpen={isRemodelingModalOpen} title={t('landing.services.subtitle3')} imageSrc={imageSrcAdv} textDescription={t('landing.services.description3')}  onClose={() => setIsRemodelingModalOpen(false)} />
+      <PreviewModal isOpen={isOnlineModalOpen} title={t('landing.services.subtitle4')} imageSrc={imageSrcAdv} textDescription={t('landing.services.description4')}  onClose={() => setIsOnlineModalOpen(false)} />
+      <PreviewModal isOpen={isTenderModalOpen} title={t('landing.services.subtitle5')} imageSrc={imageSrcAdv} textDescription={t('landing.services.description5')}  onClose={() => setIsTenderModalOpen(false)} />
+      <PreviewModal isOpen={isBudgetModalOpen} title={t('landing.services.subtitle6')} imageSrc={imageSrcAdv} textDescription={t('landing.services.description6')}  onClose={() => setIsBudgetModalOpen(false)} />
+      <PreviewModal isOpen={isControlModalOpen} title={t('landing.services.subtitle7')} imageSrc={imageSrcAdv} textDescription={t('landing.services.description7')} onClose={() => setIsControlModalOpen(false)} />  
     </div>
   );
 };

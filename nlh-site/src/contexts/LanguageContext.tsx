@@ -17,11 +17,29 @@ const translations = {
     'nav.login': 'Login',
     
     // Landing Page
-    'landing.hero.title': 'Professional Construction Management',
-    'landing.hero.subtitle': 'Streamline your construction projects with our comprehensive management platform',
+    'landing.hero.title': 'WMI - We Make it Happen',
+    'landing.hero.subtitle': 'Project Advisory and Management - New Construction - Remodeling - Tenant Improvements',
+    'landing.hero.subtitle2': 'Online Platform - Tenders - Budget - Project Control',
     'landing.services.title': 'Our Services',
     'landing.about.title': 'About Us',
     'landing.contact.title': 'Contact Us',
+
+    // Landing Page Services Section
+    'landing.services.subtitle1': 'Project Advisory and Management',
+    'landing.services.description1': 'Provides expert guidance and oversight throughout the entire project lifecycle, from initial concept to completion.',
+    'landing.services.subtitle2': 'New Construction',
+    'landing.services.description2': 'This includes everything from initial planing and site preparation to the final touches and projects handover.',
+    'landing.services.subtitle3': 'Remodeling',
+    'landing.services.description3': 'Transform existing spaces to meet new needs, improve functionality, or update aesthetics.',
+    'landing.services.subtitle4': 'Online Platform',
+    'landing.services.description4': 'A centralized, cloud-based solution that digitizes and streamlines a company\'s entire project workflow.',
+    'landing.services.subtitle5': 'Tender Management',
+    'landing.services.description5': 'Comprehensive management of the tendering process, from preparing and issuing tender documents to evaluating bids and awarding contracts.',
+    'landing.services.subtitle6': 'Budget',
+    'landing.services.description6': 'Provide a detailed financial roadmap for your project, from initial planning to final completion.',
+    'landing.services.subtitle7': 'Project Control',
+    'landing.services.description7': 'A systematic approach to managing and monitoring a project\'s performance to ensure it stays on budget and schedule.',
+
     
     // Login
     'login.title': 'Login to Your Account',
@@ -274,11 +292,28 @@ const translations = {
     'nav.login': 'Iniciar Sesión',
     
     // Landing Page
-    'landing.hero.title': 'Gestión Profesional de Construcción',
-    'landing.hero.subtitle': 'Optimiza tus proyectos de construcción con nuestra plataforma integral de gestión',
+    'landing.hero.title': 'NLH - Nosotros Lo Hacemos',
+    'landing.hero.subtitle': 'Asesorias y Gestión de Proyectos - Construcción - Remodelación - Habilitación',
+    'landing.hero.subtitle2': 'Plataforma Online - Licitaciones - Presupuesto - Control de Obras',
     'landing.services.title': 'Nuestros Servicios',
     'landing.about.title': 'Acerca de Nosotros',
     'landing.contact.title': 'Contáctanos',
+
+    // Lading Page Services Section
+    'landing.services.subtitle1': 'Asesoría y Gestión de Proyectos',
+    'landing.services.description1': 'Proporciona orientación experta y supervisión durante todo el ciclo de vida del proyecto, desde el concepto inicial hasta la finalización.',
+    'landing.services.subtitle2': 'Construcción Nueva',
+    'landing.services.description2': 'Esto incluye desde la planificación inicial y la preparación del sitio hasta los toques finales y la entrega del proyecto.',
+    'landing.services.subtitle3': 'Remodelación',
+    'landing.services.description3': 'Transforma espacios existentes para satisfacer nuevas necesidades, mejorar la funcionalidad o actualizar la estética.',
+    'landing.services.subtitle4': 'Plataforma Online',
+    'landing.services.description4': 'Una solución centralizada basada en la nube que digitaliza y agiliza todo el flujo de trabajo de un proyecto de una empresa.',
+    'landing.services.subtitle5': 'Gestión de Licitaciones',
+    'landing.services.description5': 'Gestión integral del proceso de licitación, desde la preparación y emisión de los documentos de licitación hasta la evaluación de las ofertas y la adjudicación de contratos.',
+    'landing.services.subtitle6': 'Presupuesto',
+    'landing.services.description6': 'Proporciona una hoja de ruta financiera detallada para su proyecto, desde la planificación inicial hasta la finalización.',
+    'landing.services.subtitle7': 'Control de Proyectos',
+    'landing.services.description7': 'Un enfoque sistemático para gestionar y monitorear el rendimiento de un proyecto para garantizar que se mantenga dentro del presupuesto y el cronograma.',
     
     // Login
     'login.title': 'Iniciar Sesión en tu Cuenta',
@@ -528,11 +563,28 @@ const translations = {
     'nav.login': 'Entrar',
     
     // Landing Page
-    'landing.hero.title': 'Gestão Profissional de Construção',
-    'landing.hero.subtitle': 'Otimize seus projetos de construção com nossa plataforma abrangente de gestão',
+    'landing.hero.title': 'NFA - Nós Fazemos Acontecer',
+    'landing.hero.subtitle': 'Construction and Project Management - New Construction - Remodeling - Tenant Construção e Gerenciamento de Projetos - Novas Construções - Remodelação - Melhorias para Inquilinos',
+    'landing.hero.subtitle2': 'Plataforma Online - Licitações - Orçamento - Controlo de Obras',
     'landing.services.title': 'Nossos Serviços',
     'landing.about.title': 'Sobre Nós',
     'landing.contact.title': 'Entre em Contato',
+
+     // Landing Page Services Section
+    'landing.services.subtitle1': 'Consultoria e Gestão de Projetos',
+    'landing.services.description1': 'Fornece orientação especializada e supervisão durante todo o ciclo de vida do projeto, desde o conceito inicial até a conclusão.',
+    'landing.services.subtitle2': 'Nova Construção',
+    'landing.services.description2': 'Isso inclui desde o planejamento inicial e a preparação do local até os toques finais e a entrega do projeto.',
+    'landing.services.subtitle3': 'Remodelação',
+    'landing.services.description3': 'Transforme espaços existentes para atender a novas necessidades, melhorar a funcionalidade ou atualizar a estética.',
+    'landing.services.subtitle4': 'Plataforma Online',
+    'landing.services.description4': 'Uma solução centralizada baseada na nuvem que digitaliza e agiliza todo o fluxo de trabalho do projeto de uma empresa.',
+    'landing.services.subtitle5': 'Gestão de Licitações',
+    'landing.services.description5': 'Gestão abrangente do processo de licitação, desde a preparação e emissão dos documentos de licitação até a avaliação das propostas e adjudicação de contratos.',
+    'landing.services.subtitle6': 'Orçamento',
+    'landing.services.description6': 'Fornece um roteiro financeiro detalhado para o seu projeto, desde o planejamento inicial até a conclusão.',
+    'landing.services.subtitle7': 'Controle de Projetos',
+    'landing.services.description7': 'Uma abordagem sistemática para gerenciar e monitorar o desempenho de um projeto para garantir que ele permaneça dentro do orçamento e do cronograma.',
     
     // Login
     'login.title': 'Entrar na Sua Conta',
