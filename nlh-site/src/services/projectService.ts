@@ -1,15 +1,18 @@
 import { Project, ProjectFile, Question } from '../types';
 import { mockProjects, mockProjectFiles, mockQuestions } from '../data/mockData';
-import { getAllProjects } from '../api/projectApi';
+import { getAllProjects, getProjectById} from '../api/projectApi';
+import { util } from '../common';
 
 export const projectService = {
   // Get all projects
   getProjects: async (): Promise<Project[]> => {
-    return new Promise((resolve) => {
-      console.log(getAllProjects());
-      console.log('mock ========= ');
-      console.log(mockProjects);
-      setTimeout(() => resolve([...mockProjects]), 500);
+    return new Promise((resolve) => {    
+      setTimeout(async () => {
+        const response = await getAllProjects();
+        console.log('Fetched projects:', response.data);
+        console.log('Processed projects:', util.processProjects(response.data));
+        resolve([...util.processProjects(response.data)]);
+      }, 500);
     });
   },
 
@@ -17,7 +20,7 @@ export const projectService = {
   getProjectsByUserId: async (userId: string): Promise<Project[]> => {
     return new Promise((resolve) => {
       setTimeout(() => {
-        const userProjects = mockProjects.filter(p => p.userId === userId);
+        const userProjects = mockProjects.filter(p => p.userId == userId);
         resolve(userProjects);
       }, 500);
     });
@@ -26,9 +29,12 @@ export const projectService = {
   // Get project by ID
   getProjectById: async (id: string): Promise<Project | null> => {
     return new Promise((resolve) => {
-      setTimeout(() => {
-        const project = mockProjects.find(p => p.id === id);
-        resolve(project || null);
+      setTimeout(async () => {
+        const project = await getProjectById(id);
+        const processedProjects = util.processProjects(project.data);
+        console.log('Fetched project by ID:', project.data);
+        console.log('Processed project by ID:', processedProjects);
+        resolve(processedProjects.length > 0 ? processedProjects[0] : null);
       }, 300);
     });
   },
