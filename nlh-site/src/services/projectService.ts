@@ -8,10 +8,11 @@ export const projectService = {
   getProjects: async (): Promise<Project[]> => {
     return new Promise((resolve) => {    
       setTimeout(async () => {
-        const response = await getAllProjects();
+       /** const response = await getAllProjects();
         console.log('Fetched projects:', response.data);
         console.log('Processed projects:', util.processProjects(response.data));
-        resolve([...util.processProjects(response.data)]);
+        resolve([...util.processProjects(response.data)]); */
+        resolve(mockProjects);
       }, 500);
     });
   },
@@ -30,11 +31,12 @@ export const projectService = {
   getProjectById: async (id: string): Promise<Project | null> => {
     return new Promise((resolve) => {
       setTimeout(async () => {
-        const project = await getProjectById(id);
+        /**const project = await getProjectById(id);
         const processedProjects = util.processProjects(project.data);
         console.log('Fetched project by ID:', project.data);
         console.log('Processed project by ID:', processedProjects);
-        resolve(processedProjects.length > 0 ? processedProjects[0] : null);
+        resolve(processedProjects.length > 0 ? processedProjects[0] : null);*/
+        resolve(mockProjects.find(p => p.id === id) || null);
       }, 300);
     });
   },

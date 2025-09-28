@@ -13,7 +13,7 @@ export const util = {
                     id,
                     ...commonData,
                     professionals: [],
-                    specialist: []
+                    specialists: []
                 });
             }
 
@@ -22,7 +22,7 @@ export const util = {
             if (role === 'professional') {
                 project.professionals.push(name);
             } else if (role === 'specialist') {
-                project.specialist.push(name);
+                project.specialists.push(name);
             }
         });
 
