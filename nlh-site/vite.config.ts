@@ -7,5 +7,5 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
-  base: '/nlh-web/nlh-site',
+  base: '/nlh-site',
 });
