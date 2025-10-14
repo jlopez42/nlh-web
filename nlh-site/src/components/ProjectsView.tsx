@@ -69,7 +69,10 @@ const ProjectsView: React.FC = () => {
     return new Intl.DateTimeFormat('es-ES', {
       year: 'numeric',
       month: 'short',
-      day: 'numeric'
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
     }).format(new Date(date));
   };
 

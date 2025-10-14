@@ -325,13 +325,14 @@ const translations = {
     
     // Dashboard
     'dashboard.profile': 'Perfil',
-    'dashboard.projects': 'Proyectos',
+    'dashboard.projects': 'GESTION DE PROYECTOS',
     'dashboard.license': 'Licitación',
     'dashboard.settings': 'Configuración',
     'dashboard.logout': 'Cerrar Sesión',
 
     // Dashboard Projects
-    'dashboard.projects.subtitle': 'Gestión de sus proyectos de construcción',
+    'dashboard.projects.title': 'Proyectos',
+    'dashboard.projects.subtitle': ' ',
     'dashboard.projects.notfound': 'No hay proyectos',
     'dashboard.projects.location': 'Localización',
     'dashboard.projects.type': 'Tipo',
@@ -342,9 +343,9 @@ const translations = {
 
      // Tab
     'tab.general': 'General',
-    'tab.deadline': 'Fecha Limites',
+    'tab.deadline': 'Plazos y Fechas',
     'tab.files': 'Archivos',
-    'tab.qa': 'Consultas',
+    'tab.qa': 'Portal Consultas',
     'tab.download': 'Descargas',
 
     // Profile
@@ -476,8 +477,8 @@ const translations = {
     'project.qa.type': 'Tipo de pregunta',
     'project.qa.question': 'Pregunta',
     'project.qa.technical': 'Técnico',
-    'project.qa.procurement': 'Obtención',
-    'project.qa.schedule': 'Cronograma',
+    'project.qa.procurement': 'Administrativo',
+    'project.qa.schedule': 'Aclaración',
     'project.qa.general': 'General',
 
     'project.qa.list' : 'Preguntas y respuestas',

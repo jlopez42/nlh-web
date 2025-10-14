@@ -36,7 +36,6 @@ const SettingsView: React.FC = () => {
 
   const tabs = [
     { id: 'users', label: t('project.setting.tab.user'), icon: Users },
-    { id: 'templates', label: t('project.setting.tab.project'), icon: FileTemplate },
     { id: 'backup', label: t('project.setting.tab.backup'), icon: Database },
   ];
 
@@ -156,24 +155,6 @@ const SettingsView: React.FC = () => {
                 ))}
               </tbody>
             </table>
-          </div>
-        </div>
-      )}
-
-      {activeTab === 'templates' && (
-        <div>
-          <h2 className="text-xl font-semibold text-gray-900 mb-6">{t('project.setting.template.title')}</h2>
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <p className="text-gray-600">{t('project.setting.template.description')}</p>
-            <div className="mt-4 space-y-4">
-              <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center">
-                <FolderPlus className="h-12 w-12 text-gray-400 mx-auto mb-4" />
-                <p className="text-gray-500">{t('project.setting.template.without')}</p>
-                <button className="mt-2 text-blue-600 hover:text-blue-700">
-                  {t('project.setting.template.create')}
-                </button>
-              </div>
-            </div>
           </div>
         </div>
       )}
