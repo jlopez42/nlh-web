@@ -14,8 +14,8 @@ const db = mysql.createConnection({
 });
 
 app.get('/projects', (req, res) => {
-    const sql = `Select p.id, p.title, p.description, p.location, p.typeId, p.title, pc.startDate, p.status, p.surface,
-                    p.quantity, p.floor, p.materiality, p.enclosure, pr.mandatory1, pr.mandatory2, m.name, m.role, pr.contact,
+    const sql = `Select p.id, p.title, p.description, p.location, pt.title as type, p.title, pc.startDate, p.status, p.surface,
+                    p.quantity, p.floor, p.materiality, p.enclosure, pr.mandatory1 as principal1, pr.mandatory2 as principal2, m.name, m.role, pr.contact,
                     pc.publicationDate, pc.startDate, pc.finishDate, pc.offersLimit, pc.asksLimit, pc.responseLimit, p.additionalInfo
                     from projects as p
                     inner join project_types as pt on p.typeId = pt.id
@@ -34,8 +34,8 @@ app.get('/projects/:id', (req, res) => {
     const projectId = req.params.id;
     console.log('Fetching project with ID:', projectId);
     // Use parameterized query to prevent SQL injection
-    const sql = `Select p.id, p.title, p.description, p.location, p.typeId, p.title, pc.startDate, p.status, p.surface,
-                    p.quantity, p.floor, p.materiality, p.enclosure, pr.mandatory1, pr.mandatory2, m.name, m.role, pr.contact,
+    const sql = `Select p.id, p.title, p.description, p.location, pt.title as type, p.title, pc.startDate, p.status, p.surface,
+                    p.quantity, p.floor, p.materiality, p.enclosure, pr.mandatory1 as principal1, pr.mandatory2 as principal2, m.name, m.role, pr.contact,
                     pc.publicationDate, pc.startDate, pc.finishDate, pc.offersLimit, pc.asksLimit, pc.responseLimit, p.additionalInfo
                     from projects as p
                     inner join project_types as pt on p.typeId = pt.id

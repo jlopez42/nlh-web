@@ -190,7 +190,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ isOpen, onClose, project, o
   };
 
   const formatDate = (date: Date) => {
-    return new Intl.DateTimeFormat('es-ES', {
+    return new Intl.DateTimeFormat('en-US', {
       year: 'numeric',
       month: 'short',
       day: 'numeric',
@@ -576,7 +576,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ isOpen, onClose, project, o
                   onChange={(e) => setFormData(prev => ({ ...prev, additionalInfo: e.target.value }))}
                   rows={4}
                   className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="Any additional project information..."
+                  placeholder={t('project.addition.title.placeholder')}
                 />
               </div>
             </div>

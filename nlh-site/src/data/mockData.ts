@@ -160,3 +160,27 @@ export const mockQuestions: Question[] = [
     askedAt: new Date('2024-01-22')
   }
 ];
+
+export const mockQuestionsSpanish: Question[] = [
+  {
+    id: '1',
+    projectId: '1',
+    subject: 'Requisitos de Fundación',
+    question: '¿Cuáles son los requisitos específicos para la fundación dados las condiciones del suelo?',
+    questionType: 'Técnico',
+    askedBy: 'Carlos Silva',
+    askedAt: new Date('2024-01-20'),
+    response: 'Según el informe geotécnico, requerimos fundaciones de concreto reforzado con pilotes de acero.',
+    respondedBy: 'John Smith',
+    respondedAt: new Date('2024-01-21')
+  },
+  {
+    id: '2',
+    projectId: '1',
+    subject: 'Especificaciones de Materiales',
+    question: '¿Hay proveedores preferidos para los materiales de la fachada de vidrio?',
+    questionType: 'Intervención',
+    askedBy: 'Maria Rodriguez',
+    askedAt: new Date('2024-01-22')
+  }
+];

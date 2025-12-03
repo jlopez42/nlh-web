@@ -232,9 +232,10 @@ const SettingsView: React.FC = () => {
                   onChange={(e) => setNewUser(prev => ({ ...prev, role: e.target.value as UserRole }))}
                   className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 >
+                  <option value="administrator">{t('project.setting.user.administrator')}</option>
                   <option value="customer">{t('project.setting.user.customer')}</option>
                   <option value="provider">{t('project.setting.user.provider')}</option>
-                  <option value="administrator">{t('project.setting.user.administrator')}</option>
+                  <option value="professional">{t('project.setting.user.professional')}</option>
                 </select>
               </div>
             </form>
